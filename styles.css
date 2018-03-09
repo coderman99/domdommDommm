@@ -1,0 +1,29 @@
+.thisDiv {
+    width: 200px;
+    height: 200px;
+    background: black;
+    color: white;
+    display: inline-block;
+    margin: 40px 10px 40px 10px;
+    padding: 5px 5px 5px 5px;
+}
+
+#thisDivElements[i] {
+    text-align: center;
+    position: relative;
+}
+/* .thisDiv:hover {
+    background: white;
+    color: black; 
+} */
+
+
+/* button.addEventListener("click", function () {
+    let div = document.createElement("div");
+    document.body.appendChild(div);
+    div.className = "thisDiv";
+    
+});
+div.addEventListener("mouseover", function(){
+
+}) */
