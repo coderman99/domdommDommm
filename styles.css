@@ -6,12 +6,11 @@
     display: inline-block;
     margin: 40px 10px 40px 10px;
     padding: 5px 5px 5px 5px;
+    vertical-align: middle;
+    line-height: 200px;
+    text-align: center;
 }
 
-#thisDivElements[i] {
-    text-align: center;
-    position: relative;
-}
 /* .thisDiv:hover {
     background: white;
     color: black; 
