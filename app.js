@@ -19,8 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // btnFunction
     function btnFunction() {
         let div = document.createElement("div");
-        document.body.appendChild(div);
         div.className = "thisDiv";
+        document.body.appendChild(div);
+
         let thisDivElements = document.querySelectorAll(".thisDiv");
         for (i = 0; i < thisDivElements.length; i++) {
             thisDivElements[i].id = "" + i;
@@ -34,10 +35,24 @@ document.addEventListener("DOMContentLoaded", function () {
         function mouseOver() {
             this.innerText = this.id;
         }
-
+        div.addEventListener("click", clicked);
+        function clicked() {
+            let colors = ["red", "yellow", "green", "purple", "orange"];
+            div.style.background = colors[Math.floor(Math.random() * colors.length)];
+        }
+        div.addEventListener("dblclick", dblclicked);
+        function dblclicked() {    
+            if(this.id % 2 === 0){
+                document.body.removeChild(div);
+            } 
+            else if(this.id % 2 !== 0){
+                document.body.removeChild(div);
+            } 
+        }
     }
 
 });
+
 
 
 
