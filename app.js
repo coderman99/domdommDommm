@@ -41,12 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
             div.style.background = colors[Math.floor(Math.random() * colors.length)];
         }
         div.addEventListener("dblclick", dblclicked);
-        function dblclicked() {    
-            if(this.id % 2 === 0){
-                document.body.removeChild(div);
+        function dblclicked() {  
+            let id = Number(this.id);
+            
+            if(id % 2 === 0){
+            let addDiv = document.getElementById(id).nextElementSibling;
+            document.body.removeChild(addDiv);
             } 
             else if(this.id % 2 !== 0){
-                document.body.removeChild(div);
+            let subDiv = document.getElementById(id).previousElementSibling;
+            document.body.removeChild(subDiv);
             } 
         }
     }
